@@ -3,9 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header class="header">
+        <div class="logo"> 
+            <img src="./imag/landingUI_desktop_mobile_kit/assets/logo.svg" alt="Podcast" class="im-logo">
+        </div>
+        <nav class="menu">
+            <div class="itemsDesplegables">
+               <input type="checkbox" class="menuDesplegable" id="menu">
+               <label for="menu" class="menuLabel">
+                    <i class="fas fa-times times"></i>
+                    <i class="fas fa-bars bars"></i>
+               </label>
+               <div class="items">
+                   <a href="#" class="links">
+                       EPISODIOS
+                   </a>
+                   <a href="#" class="links">
+                       NOSOTROS
+                   </a>
+                   <a href="#" class="links">
+                       ENTREVISTAS
+                   </a>
+                   <a href="#" class="links">
+                       TÓPICOS
+                   </a>
+               </div>
+            </div>
+        </nav>
+    </header>
+    <section class="seccionInicio">
+        <h1 class="titulo">
+            Hello <del>world</del> 
+            pale blue dot.
+        </h1>
+        <p class="descripcion">
+            Un  podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios,todos los jueves cada 15 días.
+        </p>
+        <button class="botonPrincipal">
+            CONOCÈ MÀS
+        </button>
+    </section>
+    <section class="podcasts fondo"> 
+        <h2 class="titulo">Episodios</h2>
+        <div class="podcastLista">
+            <div class="contenedor">
+                <iframe src="https://open.spotify.com/embed-podcast/episode/7AZZy2nJ4R9ZndHW0h2yxt" width="100%" height="232 "frameborder="0" allow="encicrypted-media"></iframe> 
+            </div>
+            <div class="contenedor">
+                <iframe src="https://open.spotify.com/embed-podcast/show/4kYCRYJ3yK5DQbP5tbfZby" width="100%" height="232 "frameborder="0" allow="encicrypted-media"></iframe> 
+
+            </div>
+            <div class="contenedor">
+                <iframe src="https://open.spotify.com/embed-podcast/show/5JxcIaIkN8zx3Zy7yD9snv" width="100%" height="232 "frameborder="0" allow="encicrypted-media"></iframe> 
+
+            </div>
+            <div class="contenedor">
+                <iframe src="https://open.spotify.com/embed-podcast/show/2Iibd5A6R7mxkCm4NwNmUn" width="100%" height="232 "frameborder="0" allow="encicrypted-media"></iframe> 
+
+            </div>
+        </div>
+        <div class="deDondeVinimos">
+            <div class="imagen">
+                <img src="./imag/landingUI_desktop_mobile_kit/assets/phone.png" alt=" Phone" class="Phone">
+            </div>
+            <div class="contenedorTexto">
+                <h2 class="titulo">De dónde venimos</h2>
+                <p class="descripcion">Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light. <br>
+                    <br>
+                 Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="invitadosEstelares">
+        <h2 class="titulo">Invitadas/os estelares</h2>
+        <div class="galeria">
+            <img src="./imag/landingUI_desktop_mobile_kit/assets/grace-hopper.png" alt="grace-hopper" class="imagen">
+            <img src="./imag/landingUI_desktop_mobile_kit/assets/Katie-Bouman.png" alt="Katie-Bouman" class="imagen">
+            <img src="./imag/landingUI_desktop_mobile_kit/assets/Margaret_Hamilton.png" alt="Margaret_Hamilton" class="imagen">
+            <img src="./imag/landingUI_desktop_mobile_kit/assets/An E.R.A.Univac 1103 computer in the 1950s.png" alt="An" class="imagen">
+            <img src="./imag/landingUI_desktop_mobile_kit/assets/Computer operators with an Eniac — the world’s first programmable general-purpose computer.png" alt="tecnología" class="imagen">
+            <img src="./imag/landingUI_desktop_mobile_kit/assets/susan-kare.png" alt="susan-kare" class="imagen">
+        </div>
+    </section>
+    <section class="temas"> 
+        <h2 class="titulo">Algunos de nuestros temas</h2>
+        <div class="contenedorIconos">
+            <div class="seccion">
+                <img src="./imag/landingUI_desktop_mobile_kit/assets/icon1.svg" alt="icon1" class="icono">
+                <h3 class="subtitulo">Trabajo remoto</h3>
+            </div>
+            <div class="seccion">
+                <img src="./imag/landingUI_desktop_mobile_kit/assets/icon2.svg" alt="icon2" class="icono">
+                <h3 class="subtitulo">Repensando la programaciòn</h3>
+            </div>
+            <div class="seccion">
+                <img src="./imag/landingUI_desktop_mobile_kit/assets/icon3.svg" alt="icon3" class="icono">
+                <h3 class="subtitulo">Bases del còdigo</h3>
+            </div>
+            <div class="seccion">
+                <img src="./imag/landingUI_desktop_mobile_kit/assets/icon4.svg" alt="icon4" class="icono">
+                <h3 class="subtitulo">Seguridad informàtica</h3>
+            </div>
+        </div>
+    </section>
+    <section class="novedades fondo">
+        <h2 class="titulo">
+            ¿Querés las últimas novedades?
+        </h2>
+        <button class="botonSecundario">
+            ESCUCHÁ LOS EPISODIOS
+        </button>
+    </section>
+    <footer class="footer"> 
+        <h4 class="piePagina">© 2019— Hello blue pale dot</h4>
+        <div class="iconosContenedor">
+            <i class="fab fa-spotify icono"></i>
+            <i class="fab fa-instagram icono"></i>
+            <i class="fab fa-twitter icono"></i>
+            <i class="fab fa-facebook icono"></i>
+            <i class="fab fa-telegram icono"></i>
+        </div>
+
+    </footer>
 </body>
 </html>

@@ -1,0 +1,515 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: none;
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-decoration: none;
+  color: none;
+  margin: 0;
+}
+
+nav {
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  max-width: 320px;
+}
+.header .logo .im-logo {
+  width: 24px;
+  height: 24px;
+}
+.header .menu .itemsDesplegables .menuDesplegable {
+  opacity: 0;
+  position: absolute;
+  visibility: hidden;
+}
+.header .menu .itemsDesplegables .menuLabel .bars {
+  width: 18px;
+  height: 12px;
+}
+.header .menu .itemsDesplegables .menuLabel .times {
+  width: 14px;
+  height: 14px;
+  display: none;
+}
+.header .items {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 44px;
+  left: 0;
+  background-color: #0000EC;
+  padding: 24px 16px 0;
+  max-width: 320px;
+}
+.header .items .links {
+  color: #FFFFFF;
+  font-family: "IBM Plex Mono", sans-serif;
+  display: block;
+  padding-bottom: 24px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.header .menuDesplegable:checked ~ .menuLabel .bars {
+  display: none;
+}
+.header .menuDesplegable:checked ~ .menuLabel .times {
+  display: block;
+}
+.header .menuDesplegable:checked ~ .items {
+  display: block;
+}
+.header .links:hover {
+  color: #00F3BB;
+}
+.header .links:active {
+  text-decoration: line-through;
+}
+
+.seccionInicio {
+  max-width: 320px;
+}
+.seccionInicio .titulo {
+  padding: 16px 82px 16px 16px;
+  margin: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: #060A24;
+}
+.seccionInicio .descripcion {
+  margin: auto;
+  padding: 13px 16px 36px;
+  color: #060A24;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  font-weight: 400;
+}
+.seccionInicio .botonPrincipal {
+  width: 288px;
+  height: 48px;
+  color: #060A24;
+  background: #00F3BB;
+  border: none;
+  font-family: "IBM Plex Mono", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 13px;
+  margin-left: 16px;
+}
+.seccionInicio .botonPrincipal:hover {
+  background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+}
+
+.fondo {
+  position: relative;
+}
+.fondo::after {
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  transform: skew(0, -6deg);
+}
+
+.podcasts {
+  max-width: 320px;
+  padding: 40px 11px 140px;
+  top: 60px;
+}
+.podcasts .podcastLista {
+  position: relative;
+  z-index: 2;
+}
+.podcasts .titulo {
+  position: relative;
+  z-index: 2;
+  font-size: 36px;
+  line-height: 42px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 200;
+  color: white;
+  margin-bottom: 21px;
+}
+.podcasts .contenedor {
+  margin-bottom: 11px;
+  line-height: 0;
+  width: 298px;
+  height: 225px;
+}
+.podcasts .deDondeVinimos {
+  position: absolute;
+  z-index: 2;
+}
+.podcasts .deDondeVinimos .imagen {
+  max-width: 100%;
+  line-height: 0;
+  position: absolute;
+  z-index: 2;
+  margin: 70PX auto 0;
+  margin-top: 50px;
+}
+.podcasts .deDondeVinimos .imagen .Phone {
+  width: 290px;
+  height: 480px;
+}
+.podcasts .deDondeVinimos .contenedorTexto {
+  margin-top: 550px;
+  padding: 0px 16px;
+}
+.podcasts .deDondeVinimos .contenedorTexto .titulo {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: #060A24;
+  letter-spacing: 0;
+  line-height: 42px;
+  margin-bottom: auto;
+}
+.podcasts .deDondeVinimos .contenedorTexto .descripcion {
+  color: #060A24;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+.invitadosEstelares {
+  max-width: 320px;
+  margin-top: 930px;
+}
+.invitadosEstelares .titulo {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: #060A24;
+  letter-spacing: 0;
+  line-height: 42px;
+  padding: 16px;
+}
+.invitadosEstelares .galeria .imagen {
+  width: 320px;
+  height: 243px;
+  display: block;
+}
+
+.temas {
+  margin-top: 48px;
+  max-width: 320px;
+}
+.temas .titulo {
+  padding: 16px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 36px;
+  color: #060A24;
+  letter-spacing: 0;
+  line-height: 42px;
+  font-weight: 400;
+}
+.temas .contenedorIconos {
+  padding: 37px 16px;
+}
+.temas .contenedorIconos .seccion .icono {
+  width: 104px;
+  height: 104px;
+  margin-left: 92px;
+}
+.temas .contenedorIconos .seccion .subtitulo {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: #060A24;
+  letter-spacing: 0;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.novedades {
+  max-width: 320px;
+  padding: 30px 0px 80px;
+}
+.novedades .titulo {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 36px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 42px;
+  font-weight: 200;
+  z-index: 2;
+  position: relative;
+  padding: 24px;
+  margin-bottom: 4px;
+}
+.novedades .botonSecundario {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 16px;
+  width: 288px;
+  height: 48px;
+  font-weight: 600;
+  color: #060A24;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 22px;
+  z-index: 2;
+  position: relative;
+  margin-left: 16px;
+  background: #00F3BB;
+  border: none;
+}
+.novedades .botonSecundario:hover {
+  background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+}
+
+.footer {
+  position: absolute;
+  background: white;
+  margin-top: -17px;
+  max-width: 320px;
+  width: 100%;
+}
+.footer .piePagina {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 14px;
+  color: #060A24;
+  letter-spacing: 0;
+  line-height: 22px;
+  position: relative;
+  font-weight: 400;
+  margin-left: 47px;
+  margin-right: 46px;
+  padding-top: 24px;
+  z-index: 2;
+}
+.footer .iconosContenedor {
+  font-size: 16px;
+  color: #060A24;
+  letter-spacing: 0;
+  line-height: 28px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 45px 31px;
+}
+.footer .iconosContenedor .icono {
+  width: 14px;
+  height: 28px;
+}
+
+@media (min-width: 1280px) {
+  .header {
+    padding: 22px 100px;
+    max-width: 1440px;
+  }
+  .header .logo .im-logo {
+    width: 36px;
+    height: 36px;
+  }
+  .header .itemsDesplegables .menuLabel .bars {
+    display: none;
+  }
+  .header .itemsDesplegables .menuLabel .times {
+    display: none;
+  }
+  .header .items {
+    top: 0px;
+    right: 0px;
+    display: flex;
+    background-color: white;
+    flex-direction: row;
+    margin-left: 758px;
+  }
+  .header .items .links {
+    color: #060A24;
+    padding: 26px 24px;
+  }
+
+  .seccionInicio {
+    max-width: 1440px;
+  }
+  .seccionInicio .titulo {
+    padding: 120px 200px 0px;
+    margin: 0;
+    font-size: 64px;
+  }
+  .seccionInicio .descripcion {
+    margin: auto;
+    padding: 0px 612px 56px 200px;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 24px;
+  }
+  .seccionInicio .botonPrincipal {
+    width: 256px;
+    height: 56px;
+    margin-left: 200px;
+  }
+
+  .podcasts {
+    max-width: 1440px;
+    padding: 40px 100px 80px;
+    top: 80px;
+  }
+  .podcasts .podcastLista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .podcasts .titulo {
+    font-size: 48px;
+    color: #FFFFFF;
+    line-height: 42px;
+    color: white;
+    margin-bottom: 26px;
+    margin-top: 80px;
+    margin-left: 100px;
+  }
+  .podcasts .contenedor {
+    margin-bottom: 72px;
+    line-height: 0;
+    width: 584px;
+    height: 232px;
+  }
+  .podcasts .deDondeVinimos {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+  }
+  .podcasts .deDondeVinimos .imagen {
+    max-width: 100px;
+    line-height: 0;
+    position: absolute;
+    z-index: 2;
+  }
+  .podcasts .deDondeVinimos .imagen .Phone {
+    width: 360px;
+    height: 600px;
+    margin-left: 120px;
+    margin-top: -70px;
+  }
+  .podcasts .deDondeVinimos .contenedorTexto {
+    margin-top: auto;
+    padding-top: 90px;
+    margin-left: 610px;
+    margin-right: 230px;
+  }
+  .podcasts .deDondeVinimos .contenedorTexto .titulo {
+    font-size: 48px;
+    color: #060A24;
+    margin-left: -5px;
+    margin-bottom: 24px;
+  }
+  .podcasts .deDondeVinimos .contenedorTexto .descripcion {
+    font-size: 16px;
+    color: #060A24;
+    line-height: 24px;
+  }
+
+  .invitadosEstelares {
+    max-width: 1440px;
+    margin-top: 620px;
+  }
+  .invitadosEstelares .titulo {
+    font-size: 48px;
+    padding-left: 200px;
+    margin-bottom: 36px;
+  }
+  .invitadosEstelares .galeria {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .invitadosEstelares .galeria .imagen {
+    width: 480px;
+    height: 364px;
+  }
+
+  .temas {
+    max-width: 1440px;
+    margin-bottom: 80px;
+  }
+  .temas .titulo {
+    font-size: 48px;
+    padding: 64px 200px;
+  }
+  .temas .contenedorIconos {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 180px;
+  }
+  .temas .contenedorIconos .seccion {
+    padding: 0 40px;
+  }
+  .temas .contenedorIconos .seccion .icono {
+    width: 104px;
+    height: 104px;
+  }
+  .temas .contenedorIconos .seccion .subtitulo {
+    margin-bottom: 50px;
+    margin-top: 29px;
+  }
+
+  .novedades {
+    max-width: 1440px;
+  }
+  .novedades .titulo {
+    font-size: 48px;
+    margin-top: 90px;
+    margin-bottom: 36px;
+  }
+  .novedades .botonSecundario {
+    font-size: 18px;
+    line-height: 24px;
+    width: 345px;
+    height: 56px;
+    margin-left: 547px;
+    margin-bottom: 120px;
+  }
+
+  .footer {
+    display: flex;
+    margin-top: -80px;
+    max-width: 1440px;
+    padding-top: 36px;
+    padding-bottom: 31px;
+  }
+  .footer .piePagina {
+    font-size: 16px;
+    line-height: 28px;
+    margin-left: 100px;
+  }
+  .footer .iconosContenedor {
+    font-size: 18px;
+    margin-left: 670px;
+    padding-right: 78px;
+  }
+  .footer .iconosContenedor .icono {
+    width: 18px;
+    height: 28px;
+    padding: 22px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
