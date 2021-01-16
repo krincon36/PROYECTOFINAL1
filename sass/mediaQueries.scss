@@ -1,0 +1,186 @@
+//Media queries
+@media(min-width:1280px){
+    .header{
+        padding:22px 100px;
+       .logo{
+           display:flex;
+           justify-content: flex-start;
+           .im-logo{
+             width: 36px;
+             height: 36px;
+            }
+         }
+        .itemsDesplegables{
+            .menuLabel{
+                display: none;
+            }
+        }
+        .items{
+             top: 0;
+             right: 0;
+             display:flex ;
+             background-color:transparent;
+             justify-content: flex-end;
+             padding-right: 76px;
+            .links{
+                color: $colorLetraAzul ;
+                padding:0px 24px;
+            }
+        } 
+    }
+    .seccionInicio{
+        width: $ancho;
+    .titulo{
+        padding: 120px 200px 0px;
+        margin: 0;
+        font-size: $tamanoTitulosGrande;
+    }
+    .descripcion{
+        margin: auto;
+        padding: 0px 612px 56px 200px;
+        font-size: $tamanoLinks;
+        letter-spacing: $letterSpacing;
+        line-height: $lineHeightDescripcionGrande;
+    }
+    .botonPrincipal{
+        font-size: $tamanoSubtitulos;
+        width: 256px;
+        height: 56px;
+        margin-left: 200px;
+    }
+
+    }
+    .podcasts{
+        padding: 40px 100px 80px;
+        top:80px;
+        width: $ancho;
+        .titulo{
+            font-size: $tamanoTitulosMedianos;
+            color: $colorBlanco;
+            line-height: $lineHeightTitulo;
+            color: $colorBlanco;
+            margin-bottom: 26px;
+            margin-top: 80px;
+            margin-left: 100px;
+        }
+        .contenedor{
+            margin-bottom: 72px;
+            line-height: 0;
+            width:584px ;
+            height: 232px;
+        }
+        //*****************
+        .deDondeVinimos{
+            position: absolute;
+            z-index: 2;
+            display: flex;
+            .imagen{
+                width: $ancho;
+                line-height: 0;
+                position: absolute;
+                z-index: 2;
+                .Phone{
+                     width: 360px;
+                     height: 600px;
+                     margin-left:120px;
+                     margin-top: -70px;
+                }
+            }
+        
+            .contenedorTexto{
+                margin-top: auto;
+                padding-top: 90px;
+                margin-left: 610px;
+                margin-right: 230px;
+                .titulo{
+                    font-size: $tamanoTitulosMedianos;
+                    color: $colorLetraAzul;
+                    margin-left: -5px;
+                    margin-bottom: 24px;
+                }
+                .descripcion{
+                    font-size: $tamanoLinks;
+                    color: $colorLetraAzul;
+                    line-height: $lineHeightDescripcionGrande;
+                }
+            }
+        }
+    
+     }
+     .invitadosEstelares{
+         margin-top: 620px;
+        .titulo{
+            font-size: $tamanoTitulosMedianos;
+            padding-left: 200px;
+            margin-bottom: 36px;
+        }
+        .galeria{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .imagen{
+                width: 480px;
+                height: 364px;
+            }
+        }
+    }
+    .temas{
+        margin-bottom: 80px;
+        .titulo{
+            font-size: 48px;
+            padding: 64px 200px;
+        }
+        .contenedorIconos{
+            display: flex;
+            flex-direction: row;
+            padding: 0px 180px;
+            justify-content: center;
+
+            .seccion{
+                padding: 0 40px;
+                .icono{
+                    width: 104px;
+                    height: 104px;
+                }
+                .subtitulo{
+                    margin-bottom: 50px;
+                    margin-top: 29px;
+                }
+            }
+        }
+    }
+    .novedades{
+        margin-bottom: -35px; 
+        .titulo{
+            font-size: $tamanoTitulosMedianos;
+            margin-top: 110px;
+            margin-bottom: 36px;
+        }
+        .botonSecundario{
+            font-size: $tamanoSubtitulos;
+            line-height: $lineHeightDescripcionGrande;   
+            margin-bottom: 130px;
+        }
+    }
+    .footer{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 36px;
+        padding-bottom: 31px;
+        .piePagina{
+            font-size: $tamanoLinks;
+            line-height: 28px;
+            margin-left: 100px;
+        }
+        .iconosContenedor{
+            font-size: $tamanoSubtitulos;
+            padding-right: 78px;
+            .icono{
+                width: 18px;
+                height: 28px;
+                padding: 22px;
+            }
+            
+        }
+    }
+}

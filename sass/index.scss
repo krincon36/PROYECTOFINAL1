@@ -1,25 +1,10 @@
 //Reset
-*{
-    box-sizing: border-box;
-}
-body{
-    margin: 0;
-    padding: 0;
-}
-a{
-    text-decoration: none;
-    color: none;
-    cursor: pointer;
-}
-h1,h2,h3,h4,h5,h6{
-    text-decoration: none;
-    color: none;
-    margin: 0;
-}
-nav{
-    text-decoration: none;
-}
+@import './reset.scss';
 //Fin Reset
+
+//Variables
+@import './variables.scss';
+//Fin variables
 
 //Header
 .header{
@@ -27,7 +12,6 @@ nav{
     align-items: center;
     justify-content: space-between;
     padding:16px;
-    max-width: 320px;
     .logo{
         .im-logo{
          width: 24px;
@@ -43,12 +27,12 @@ nav{
                 }
               .menuLabel{
                  .bars{
-                     width:18px; //no toma los cambios de tamaño
-                     height:12px;
+                     width: 18px; //no toma los cambios de tamaño
+                     height: 12px;
                  }
                  .times{
-                     width:14px;
-                     height:14px;
+                     width: 14px;
+                     height: 14px;
                      display: none;
                  }
              }
@@ -57,36 +41,35 @@ nav{
     .items{
          display: none;
          position: absolute;
-         width: 100%;
+         width: $ancho;
          top: 44px;
          left: 0;
-         background-color:#0000EC ;
-         padding:24px 16px 0;
-         max-width: 320px;
+         background-color: $colorAzul;
+         padding: 24px 16px 0;
         .links{
-            color: #FFFFFF;
-            font-family: 'IBM Plex Mono',sans-serif;
+            color: $colorBlanco;
+            font-family: $ibmSans;
             display: block;
             padding-bottom: 24px;
-            font-size: 16px;
-            font-weight: 400;
+            font-size: $tamanoLinks;
+            font-weight: $grosor;
         }
     }    
      .menuDesplegable:checked {  
           &~.menuLabel{ 
                 .bars{
-                    display:none;
+                    display: none;
                 }  
                 .times{
                     display: block;
                 }   
           }  
           &~.items{
-              display:block;
+              display: block;
           }
     } 
     .links:hover{
-        color: #00F3BB ;
+        color: $hoverLinks ;
     } 
     .links:active{
         text-decoration: line-through;
@@ -96,55 +79,54 @@ nav{
 }
 //Fin Header
 
-//seccion inicio
+//Seccion inicio
 .seccionInicio{
-    max-width: 320px;
+    width: $ancho;
     .titulo{
-
         padding: 16px 82px 16px 16px;
         margin: 0;
-        font-family: 'IBM Plex Sans',sans-serif;
-        font-size: 36px;
-        font-weight:400;
-        //line-height: 42px;
-        color: #060A24;
+        font-family: $ibmSans;
+        font-size: $tamanoTitulos;
+        font-weight: $grosor;
+        color: $colorLetraAzul;
     }
     .descripcion{
         margin: auto;
         padding: 13px 16px 36px;
-        color: #060A24;
-        font-family: 'IBM Plex Mono', monospace;
-        font-size: 14px;
-        font-weight: 400;
+        color: $colorLetraAzul;
+        font-family: $ibmMono;
+        font-size: $tamanoDescripcion;
+        font-weight: $ancho;
     }
     .botonPrincipal{
         width: 288px;
         height: 48px;
-        color: #060A24;
-        background: #00F3BB;
+        color: $colorLetraAzul;
+        background: $colorAzulAgua;
         border: none;
-        font-family: 'IBM Plex Mono',sans-serif;
+        font-family: $ibmMono;
         font-weight: 600;
-        font-size: 16px;
+        font-size: $tamanoLinks;
         padding: 13px;
         margin-left: 16px;
     }
     .botonPrincipal:hover{
-        background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+        background-image: $hoverBotton;
     }
 
 }
-//fin seccion de inicio
+//Fin seccion de inicio
 
 .fondo{
     position: relative;
+    width: $ancho;
     &::after{
         display: block;
         position: absolute;
-        background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+        background: $colorFondoAzul;
         content: '';
-        width: 100%;
-        height: 100%;
+        width: $ancho;
+        height: $ancho;
         z-index: 0;
         top: 0;
         left: 0;
@@ -152,29 +134,33 @@ nav{
     }
 }
 
-//podcast
+//Podcast
 .podcasts{
-    max-width: 320px;
     padding: 40px 11px 140px;
-    top:60px;
+    top: 60px;
+    width: $ancho;
     .podcastLista{
         position: relative;
         z-index: 2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: center;
     }
     .titulo{
         position: relative;
         z-index: 2;
-        font-size: 36px;
-        line-height: 42px;
-        font-family: 'IBM Plex Sans',sans-serif;
+        font-size: $tamanoTitulos;
+        line-height: $lineHeightTitulo;
+        font-family: $ibmSans;
         font-weight: 200;
-        color: white;
+        color: $colorBlanco;
         margin-bottom: 21px;
     }
     .contenedor{
         margin-bottom: 11px;
         line-height: 0;
-        width:298px ;
+        width: 298px ;
         height: 225px;
     }
     //*****************
@@ -182,11 +168,9 @@ nav{
         position: absolute;
         z-index: 2;
         .imagen{
-            max-width: 100%;
             line-height: 0;
             position: absolute;
             z-index: 2;
-            margin: 70PX auto 0;
             margin-top: 50px;
             .Phone{
                 width: 290px;
@@ -198,98 +182,102 @@ nav{
             margin-top: 550px;
             padding: 0px 16px;
             .titulo{
-                font-family: 'IBM Plex Sans',sans-serif;
-                font-size: 36px;
-                font-weight: 400;
-                color: #060A24;
-                letter-spacing: 0;
-                line-height: 42px;
+                font-family: $ibmSans;
+                font-size: $tamanoTitulos;
+                font-weight: $grosor;
+                color: $colorLetraAzul;
+                letter-spacing: $letterSpacing;
+                line-height: $lineHeightTitulo;
                 margin-bottom: auto;
             }
             .descripcion{
-                 color: #060A24;
-                 font-family: 'IBM Plex Mono', monospace;
-                 font-size: 14px;
-                 font-weight: 400;
-                 letter-spacing: 0;
-                 line-height: 22px;  
+                 color: $colorLetraAzul;
+                 font-family: $ibmMono;
+                 font-size: $tamanoDescripcion;
+                 font-weight: $grosor;
+                 letter-spacing: $letterSpacing;
+                 line-height: $lineHeightDescripcion;  
             }
         }
     }
 
  }
-//fin de podcast
+//Fin de podcast
 
-//invitadas/os estelares
+//Invitadas/os estelares
 .invitadosEstelares{
-    max-width: 320px;
-    margin-top: 930px;
+    width: $ancho;
+    margin-top: 900px;
     .titulo{
-        font-family: 'IBM Plex Sans',sans-serif;
-        font-size: 36px;
-        font-weight: 400;
-        color: #060A24;
-        letter-spacing: 0;
-        line-height: 42px;
+        font-family: $ibmSans;
+        font-size: $tamanoTitulos;
+        font-weight: $grosor;
+        color: $colorLetraAzul;
+        letter-spacing: $letterSpacing;
+        line-height: $lineHeightTitulo;
         padding: 16px;
     }
     .galeria{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         .imagen{
+            display: block;
             width: 320px;
             height: 243px;
-            display: block;
         }
     }
 }
-//fin de invitados estelare
+//Fin de invitados estelare
 
-//temas
+//Temas
 .temas{
     margin-top: 48px;
-    max-width: 320px;
+    width: $ancho;
     .titulo{
         padding: 16px;
-        font-family: 'IBM Plex Sans',sans-serif;
-        font-size: 36px;
-        color: #060A24;
-        letter-spacing: 0;
-        line-height: 42px;
-        font-weight: 400;
+        font-family: $ibmSans;
+        font-size: $tamanoTitulos;
+        color: $colorLetraAzul;
+        letter-spacing: $letterSpacing;
+        line-height: $lineHeightTitulo;
+        font-weight: $grosor;
     }
     .contenedorIconos{
         padding: 37px 16px;
+        text-align: center;
         .seccion{
             .icono{
                 width: 104px;
                 height: 104px;
-               // padding: 0px 108px;
-                margin-left: 92px;
+                margin-left: 10px;
             }
             .subtitulo{
-                font-family: 'IBM Plex Sans',sans-serif;
+                font-family: $ibmSans;
                 font-weight: bold;
                 font-size: 24px;
-                color: #060A24;
-                letter-spacing: 0;
+                color: $colorLetraAzul;
+                letter-spacing: $letterSpacing;
                 text-align: center;
                 margin-bottom: 50px;
             }
         }
     }
 }
-//fin temas
+//Fin temas
 
-//inicio novedades
+//Inicio novedades
 .novedades{
-    max-width: 320px;
+    width: $ancho;
     padding: 30px 0px 80px;
+    text-align: center;
+    justify-content: center;
     .titulo{
-        font-family: 'IBM Plex Sans',sans-serif;
-        font-size: 36px;
-        color: #FFFFFF;
-        letter-spacing: 0;
-        text-align: center;
-        line-height: 42px;
+        font-family: $ibmSans;
+        font-size: $tamanoTitulos;
+        color: $colorBlanco;
+        letter-spacing: $letterSpacing;
+        line-height: $lineHeightTitulo;
         font-weight: 200;
         z-index: 2;
         position: relative;
@@ -297,51 +285,51 @@ nav{
         margin-bottom: 4px;
     }
     .botonSecundario{
-        font-family: 'IBM Plex Mono',sans-serif;
-        font-size: 16px;
+        font-family: $ibmMono;
+        font-size: $tamanoLinks;
         width: 288px;
         height: 48px;
         font-weight:600;
-        color: #060A24;
-        letter-spacing: 0;
-        text-align: center;
-        line-height: 22px;
+        color: $colorLetraAzul;
+        letter-spacing: $letterSpacing;
+        line-height: $lineHeightDescripcion;
         z-index: 2;
         position: relative;
-        margin-left: 16px;
-        background: #00F3BB;
+        margin-bottom: 80px;
+        background: $colorAzulAgua;
         border: none;
     }
     .botonSecundario:hover{
-        background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+        background-image: $hoverBotton;
     }
 }
-//fin novedades
+//Fin novedades
 
-//inicio footer
+//Inicio footer
 .footer{
     position: absolute;
-    background: white;
-    margin-top: -17px;
-    max-width: 320px;
-    width: 100%;
+    background: $colorBlanco;
+    margin-top: -50px;
+    width: $ancho;
+    text-align: center;
+    justify-content: center;
     .piePagina{
-        font-family: 'IBM Plex Mono',sans-serif;
-        font-size: 14px;
-        color: #060A24;
-        letter-spacing: 0;
-        line-height: 22px;
+        font-family: $ibmMono;
+        font-size: $tamanoDescripcion;
+        color: $colorLetraAzul;
+        letter-spacing: $letterSpacing;
+        line-height: $lineHeightDescripcion;
         position: relative;
-        font-weight: 400;
+        font-weight: $grosor;
         margin-left: 47px;
         margin-right: 46px;
         padding-top: 24px;
         z-index: 2;
     }
     .iconosContenedor{
-        font-size: 16px;
-        color: #060A24;
-        letter-spacing: 0;
+        font-size: $tamanoLinks;
+        color: $colorLetraAzul;
+        letter-spacing: $letterSpacing;
         line-height: 28px;
         position: relative;
         display: flex;
@@ -354,206 +342,8 @@ nav{
         
     }
 }
-//fin footer
+//Fin footer
 
 //Media queries
-@media(min-width:1280px){
-    .header{
-        padding:22px 100px;
-        max-width: 1440px;
-       .logo{
-           .im-logo{
-             width: 36px;
-             height: 36px;
-            }
-         }
-        .itemsDesplegables{
-            .menuLabel{
-                .bars{
-                     display: none;
-                }
-                .times{
-                     display: none;
-                 }
-            }
-        }
-        .items{
-             top: 0px;
-             right: 0px;
-             display:flex ;
-             background-color:white ;
-             flex-direction: row;
-             margin-left: 758px;
-            .links{
-                color: #060A24 ;
-                padding:26px 24px;
-            }
-        } 
-    }
-    .seccionInicio{
-    max-width: 1440px;
-    .titulo{
-        padding: 120px 200px 0px;
-        margin: 0;
-        font-size: 64px;
-    }
-    .descripcion{
-        margin: auto;
-        padding: 0px 612px 56px 200px;
-        font-size: 16px;
-        letter-spacing: 0;
-        line-height: 24px;
-    }
-    .botonPrincipal{
-        width: 256px;
-        height: 56px;
-        margin-left: 200px;
-    }
-
-    }
-    .podcasts{
-        max-width: 1440px;
-        padding: 40px 100px 80px;
-        top:80px;
-        .podcastLista{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .titulo{
-            font-size: 48px;
-            color: #FFFFFF;
-            line-height: 42px;
-            color: white;
-            margin-bottom: 26px;
-            margin-top: 80px;
-            margin-left: 100px;
-        }
-        .contenedor{
-            margin-bottom: 72px;
-            line-height: 0;
-            width:584px ;
-            height: 232px;
-        }
-        //*****************
-        .deDondeVinimos{
-            position: absolute;
-            z-index: 2;
-            display: flex;
-            .imagen{
-                max-width: 100px;
-                line-height: 0;
-                position: absolute;
-                z-index: 2;
-                .Phone{
-                     width: 360px;
-                     height: 600px;
-                     margin-left:120px;
-                     margin-top: -70px;
-                }
-            }
-        
-            .contenedorTexto{
-                margin-top: auto;
-                padding-top: 90px;
-                margin-left: 610px;
-                margin-right: 230px;
-                .titulo{
-                    font-size: 48px;
-                    color: #060A24;
-                    margin-left: -5px;
-                    margin-bottom: 24px;
-                }
-                .descripcion{
-                    font-size: 16px;
-                    color: #060A24;
-                    line-height: 24px;
-                }
-            }
-        }
-    
-     }
-     .invitadosEstelares{
-         max-width: 1440px;
-         margin-top: 620px;
-        .titulo{
-            font-size: 48px;
-            padding-left: 200px;
-            margin-bottom: 36px;
-        }
-        .galeria{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            .imagen{
-                width: 480px;
-                height: 364px;
-            }
-        }
-    }
-    .temas{
-        max-width: 1440px;
-        margin-bottom: 80px;
-        .titulo{
-            font-size: 48px;
-            padding: 64px 200px;
-        }
-        .contenedorIconos{
-            display: flex;
-            flex-direction: row;
-            padding: 0px 180px;
-            .seccion{
-                padding: 0 40px;
-                .icono{
-                    width: 104px;
-                    height: 104px;
-                }
-                .subtitulo{
-                    margin-bottom: 50px;
-                    margin-top: 29px;
-                }
-            }
-        }
-    }
-    .novedades{
-        max-width: 1440px;
-        .titulo{
-            font-size: 48px;
-            margin-top: 90px;
-            margin-bottom: 36px;
-        }
-        .botonSecundario{
-            font-size: 18px;
-            line-height: 24px;           
-            width: 345px;
-            height: 56px;
-            margin-left: 547px;
-            margin-bottom: 120px;
-        }
-    }
-    .footer{
-        display: flex;
-        margin-top: -80px;
-        max-width: 1440px;
-        padding-top: 36px;
-        padding-bottom: 31px;
-        .piePagina{
-            font-size: 16px;
-            line-height: 28px;
-            margin-left: 100px;
-        }
-        .iconosContenedor{
-            font-size: 18px;
-            margin-left: 670px;
-            padding-right: 78px;
-
-            .icono{
-                width: 18px;
-                height: 28px;
-                padding: 22px;
-            }
-            
-        }
-    }
-}
-
+@import './mediaQueries.scss';
+//Fin media queries

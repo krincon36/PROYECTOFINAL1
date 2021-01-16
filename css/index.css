@@ -28,7 +28,6 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 16px;
-  max-width: 320px;
 }
 .header .logo .im-logo {
   width: 24px;
@@ -56,11 +55,10 @@ nav {
   left: 0;
   background-color: #0000EC;
   padding: 24px 16px 0;
-  max-width: 320px;
 }
 .header .items .links {
   color: #FFFFFF;
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   display: block;
   padding-bottom: 24px;
   font-size: 16px;
@@ -83,7 +81,7 @@ nav {
 }
 
 .seccionInicio {
-  max-width: 320px;
+  width: 100%;
 }
 .seccionInicio .titulo {
   padding: 16px 82px 16px 16px;
@@ -99,7 +97,7 @@ nav {
   color: #060A24;
   font-family: "IBM Plex Mono", monospace;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 100%;
 }
 .seccionInicio .botonPrincipal {
   width: 288px;
@@ -107,7 +105,7 @@ nav {
   color: #060A24;
   background: #00F3BB;
   border: none;
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
   font-size: 16px;
   padding: 13px;
@@ -119,11 +117,12 @@ nav {
 
 .fondo {
   position: relative;
+  width: 100%;
 }
 .fondo::after {
   display: block;
   position: absolute;
-  background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+  background: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
   content: "";
   width: 100%;
   height: 100%;
@@ -134,13 +133,17 @@ nav {
 }
 
 .podcasts {
-  max-width: 320px;
   padding: 40px 11px 140px;
   top: 60px;
+  width: 100%;
 }
 .podcasts .podcastLista {
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
 }
 .podcasts .titulo {
   position: relative;
@@ -149,7 +152,7 @@ nav {
   line-height: 42px;
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 200;
-  color: white;
+  color: #FFFFFF;
   margin-bottom: 21px;
 }
 .podcasts .contenedor {
@@ -163,11 +166,9 @@ nav {
   z-index: 2;
 }
 .podcasts .deDondeVinimos .imagen {
-  max-width: 100%;
   line-height: 0;
   position: absolute;
   z-index: 2;
-  margin: 70PX auto 0;
   margin-top: 50px;
 }
 .podcasts .deDondeVinimos .imagen .Phone {
@@ -197,8 +198,8 @@ nav {
 }
 
 .invitadosEstelares {
-  max-width: 320px;
-  margin-top: 930px;
+  width: 100%;
+  margin-top: 900px;
 }
 .invitadosEstelares .titulo {
   font-family: "IBM Plex Sans", sans-serif;
@@ -209,15 +210,20 @@ nav {
   line-height: 42px;
   padding: 16px;
 }
+.invitadosEstelares .galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .invitadosEstelares .galeria .imagen {
+  display: block;
   width: 320px;
   height: 243px;
-  display: block;
 }
 
 .temas {
   margin-top: 48px;
-  max-width: 320px;
+  width: 100%;
 }
 .temas .titulo {
   padding: 16px;
@@ -230,11 +236,12 @@ nav {
 }
 .temas .contenedorIconos {
   padding: 37px 16px;
+  text-align: center;
 }
 .temas .contenedorIconos .seccion .icono {
   width: 104px;
   height: 104px;
-  margin-left: 92px;
+  margin-left: 10px;
 }
 .temas .contenedorIconos .seccion .subtitulo {
   font-family: "IBM Plex Sans", sans-serif;
@@ -247,15 +254,16 @@ nav {
 }
 
 .novedades {
-  max-width: 320px;
+  width: 100%;
   padding: 30px 0px 80px;
+  text-align: center;
+  justify-content: center;
 }
 .novedades .titulo {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 36px;
   color: #FFFFFF;
   letter-spacing: 0;
-  text-align: center;
   line-height: 42px;
   font-weight: 200;
   z-index: 2;
@@ -264,18 +272,17 @@ nav {
   margin-bottom: 4px;
 }
 .novedades .botonSecundario {
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 16px;
   width: 288px;
   height: 48px;
   font-weight: 600;
   color: #060A24;
   letter-spacing: 0;
-  text-align: center;
   line-height: 22px;
   z-index: 2;
   position: relative;
-  margin-left: 16px;
+  margin-bottom: 80px;
   background: #00F3BB;
   border: none;
 }
@@ -285,13 +292,14 @@ nav {
 
 .footer {
   position: absolute;
-  background: white;
-  margin-top: -17px;
-  max-width: 320px;
+  background: #FFFFFF;
+  margin-top: -50px;
   width: 100%;
+  text-align: center;
+  justify-content: center;
 }
 .footer .piePagina {
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 14px;
   color: #060A24;
   letter-spacing: 0;
@@ -321,33 +329,33 @@ nav {
 @media (min-width: 1280px) {
   .header {
     padding: 22px 100px;
-    max-width: 1440px;
+  }
+  .header .logo {
+    display: flex;
+    justify-content: flex-start;
   }
   .header .logo .im-logo {
     width: 36px;
     height: 36px;
   }
-  .header .itemsDesplegables .menuLabel .bars {
-    display: none;
-  }
-  .header .itemsDesplegables .menuLabel .times {
+  .header .itemsDesplegables .menuLabel {
     display: none;
   }
   .header .items {
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
     display: flex;
-    background-color: white;
-    flex-direction: row;
-    margin-left: 758px;
+    background-color: transparent;
+    justify-content: flex-end;
+    padding-right: 76px;
   }
   .header .items .links {
     color: #060A24;
-    padding: 26px 24px;
+    padding: 0px 24px;
   }
 
   .seccionInicio {
-    max-width: 1440px;
+    width: 100%;
   }
   .seccionInicio .titulo {
     padding: 120px 200px 0px;
@@ -362,26 +370,22 @@ nav {
     line-height: 24px;
   }
   .seccionInicio .botonPrincipal {
+    font-size: 18px;
     width: 256px;
     height: 56px;
     margin-left: 200px;
   }
 
   .podcasts {
-    max-width: 1440px;
     padding: 40px 100px 80px;
     top: 80px;
-  }
-  .podcasts .podcastLista {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    width: 100%;
   }
   .podcasts .titulo {
     font-size: 48px;
     color: #FFFFFF;
     line-height: 42px;
-    color: white;
+    color: #FFFFFF;
     margin-bottom: 26px;
     margin-top: 80px;
     margin-left: 100px;
@@ -398,7 +402,7 @@ nav {
     display: flex;
   }
   .podcasts .deDondeVinimos .imagen {
-    max-width: 100px;
+    width: 100%;
     line-height: 0;
     position: absolute;
     z-index: 2;
@@ -428,7 +432,6 @@ nav {
   }
 
   .invitadosEstelares {
-    max-width: 1440px;
     margin-top: 620px;
   }
   .invitadosEstelares .titulo {
@@ -447,7 +450,6 @@ nav {
   }
 
   .temas {
-    max-width: 1440px;
     margin-bottom: 80px;
   }
   .temas .titulo {
@@ -458,6 +460,7 @@ nav {
     display: flex;
     flex-direction: row;
     padding: 0px 180px;
+    justify-content: center;
   }
   .temas .contenedorIconos .seccion {
     padding: 0 40px;
@@ -472,26 +475,22 @@ nav {
   }
 
   .novedades {
-    max-width: 1440px;
+    margin-bottom: -35px;
   }
   .novedades .titulo {
     font-size: 48px;
-    margin-top: 90px;
+    margin-top: 110px;
     margin-bottom: 36px;
   }
   .novedades .botonSecundario {
     font-size: 18px;
     line-height: 24px;
-    width: 345px;
-    height: 56px;
-    margin-left: 547px;
-    margin-bottom: 120px;
+    margin-bottom: 130px;
   }
 
   .footer {
     display: flex;
-    margin-top: -80px;
-    max-width: 1440px;
+    justify-content: space-between;
     padding-top: 36px;
     padding-bottom: 31px;
   }
@@ -502,7 +501,6 @@ nav {
   }
   .footer .iconosContenedor {
     font-size: 18px;
-    margin-left: 670px;
     padding-right: 78px;
   }
   .footer .iconosContenedor .icono {
