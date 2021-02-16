@@ -100,8 +100,6 @@ nav {
   font-weight: 100%;
 }
 .seccionInicio .botonPrincipal {
-  width: 288px;
-  height: 48px;
   color: #060A24;
   background: #00F3BB;
   border: none;
@@ -110,6 +108,8 @@ nav {
   font-size: 16px;
   padding: 13px;
   margin-left: 16px;
+  width: 288px;
+  height: 48px;
 }
 .seccionInicio .botonPrincipal:hover {
   background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
@@ -130,6 +130,12 @@ nav {
   top: 0;
   left: 0;
   transform: skew(0, -6deg);
+}
+
+iframe {
+  width: 100%;
+  height: 232px;
+  border: 0px;
 }
 
 .podcasts {
