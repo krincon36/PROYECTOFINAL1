@@ -106,7 +106,8 @@ nav {
   font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
   font-size: 16px;
-  padding: 15px 113px;
+  padding: 16px 97px;
+  margin-left: 16px;
 }
 .seccionInicio .botonPrincipal:hover {
   background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
@@ -261,7 +262,7 @@ iframe {
   padding: 30px 0px 80px;
   text-align: center;
   justify-content: center;
-  padding-bottom: 210px;
+  padding-bottom: 150px;
 }
 .novedades .titulo {
   font-family: "IBM Plex Sans", sans-serif;
@@ -273,19 +274,19 @@ iframe {
   z-index: 2;
   position: relative;
   padding: 24px;
-  margin-bottom: 4px;
+  margin-bottom: 36px;
 }
 .novedades .botonSecundario {
   font-family: "IBM Plex Mono", monospace;
   font-size: 16px;
-  padding: 15px 113px;
+  padding: 15px 45px;
   font-weight: 600;
   color: #060A24;
   letter-spacing: 0;
   line-height: 22px;
   z-index: 2;
   position: relative;
-  margin-bottom: 80px;
+  margin-bottom: 10px;
   background: #00F3BB;
   border: none;
 }

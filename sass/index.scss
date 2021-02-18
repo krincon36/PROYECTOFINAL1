@@ -106,8 +106,8 @@
         font-weight: 600;
         font-size: $tamanoLinks;
         // padding: 13px;
-        padding: 15px 113px;;
-        // margin-left: 16px;
+        padding: 16px 97px;
+        margin-left: 16px;
         // width: 288px;
         // height: 48px;
     }
@@ -277,7 +277,7 @@ iframe{
     padding: 30px 0px 80px;
     text-align: center;
     justify-content: center;
-    padding-bottom: 210px;
+    padding-bottom: 150px;
     .titulo{
         font-family: $ibmSans;
         font-size: $tamanoTitulos;
@@ -288,21 +288,21 @@ iframe{
         z-index: 2;
         position: relative;
         padding: 24px;
-        margin-bottom: 4px;
+        margin-bottom: 36px;
     }
     .botonSecundario{
         font-family: $ibmMono;
         font-size: $tamanoLinks;
-        // width: 288px;
-        // height: 48px;
-        padding: 15px 113px;;
+        //width: 288px;
+        //height: 48px;
+        padding: 15px 45px;
         font-weight:600;
         color: $colorLetraAzul;
         letter-spacing: $letterSpacing;
         line-height: $lineHeightDescripcion;
         z-index: 2;
         position: relative;
-        margin-bottom: 80px;
+        margin-bottom: 10px;
         background: $colorAzulAgua;
         border: none;
         
