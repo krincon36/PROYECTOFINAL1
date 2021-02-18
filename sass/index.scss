@@ -105,10 +105,11 @@
         font-family: $ibmMono;
         font-weight: 600;
         font-size: $tamanoLinks;
-        padding: 13px;
-        margin-left: 16px;
-        width: 288px;
-        height: 48px;
+        // padding: 13px;
+        padding: 15px 113px;;
+        // margin-left: 16px;
+        // width: 288px;
+        // height: 48px;
     }
     .botonPrincipal:hover{
         background-image: $hoverBotton;
@@ -276,6 +277,7 @@ iframe{
     padding: 30px 0px 80px;
     text-align: center;
     justify-content: center;
+    padding-bottom: 210px;
     .titulo{
         font-family: $ibmSans;
         font-size: $tamanoTitulos;
@@ -291,8 +293,9 @@ iframe{
     .botonSecundario{
         font-family: $ibmMono;
         font-size: $tamanoLinks;
-        width: 288px;
-        height: 48px;
+        // width: 288px;
+        // height: 48px;
+        padding: 15px 113px;;
         font-weight:600;
         color: $colorLetraAzul;
         letter-spacing: $letterSpacing;
@@ -302,6 +305,7 @@ iframe{
         margin-bottom: 80px;
         background: $colorAzulAgua;
         border: none;
+        
     }
     .botonSecundario:hover{
         background-image: $hoverBotton;
@@ -342,6 +346,7 @@ iframe{
         .icono{
             width: 14px;
             height: 28px;
+            color: black;
         }
         
     }
