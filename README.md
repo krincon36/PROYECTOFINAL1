@@ -1,4 +1,4 @@
-# PROYECTOFINAL1
+# Podcast Channel
 
 Maquetado de una landing page de un canal de Podcast desarrollando funcionalidades de reproducción de contenidos, navegación, compatibilidad con múltiples exploradores y dispositivos.
 
