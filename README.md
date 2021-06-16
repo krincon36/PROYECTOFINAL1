@@ -9,4 +9,4 @@ Maquetado de una landing page de un canal de Podcast desarrollando funcionalidad
 
 ## AUTORES
 
-- **Kimberly Rincon Valencia ** - [krincon36](https://github.com/krincon36)
+- **Kimberly Rincon Valencia** - [krincon36](https://github.com/krincon36)
